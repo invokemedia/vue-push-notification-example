@@ -3,7 +3,11 @@ Vue.js Push Notification Example
 
 An example repo for using browser push notifications with Vue.js. We also use Firebase in this example as it can be used to send the notifications for free and with zero-configuration.
 
+#### Signing up in the form
+
 ![signup demo](https://raw.githubusercontent.com/invokemedia/vue-push-notification-example/master/signup.gif)
+
+#### Showing a notification
 
 ![notification demo](https://raw.githubusercontent.com/invokemedia/vue-push-notification-example/master/notify.gif)
 
