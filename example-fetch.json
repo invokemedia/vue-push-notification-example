@@ -1,0 +1,11 @@
+{
+  "notification": {
+    "title": "Yay a message.",
+    "message": "Push message! Click for URL.",
+    "icon": "/images/icon-192x192.png",
+    "tag": "simple-push-demo-notification-tag",
+    "data": {
+      "url": "https://www.invokedigital.co"
+    }
+  }
+}

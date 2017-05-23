@@ -118,6 +118,12 @@ new window.Vue({
           // subscription object, which you can call unsubscribe() on.
           serviceWorkerRegistration.pushManager.getSubscription()
             .then(function(pushSubscription) {
+              // remove the user from Firebase
+              window.firebase.database().ref('subscriptions/' + this.safeEmail).remove();
+              serviceWorkerRegistration.unregister()
+                .then(function(success) {
+                  console.log('Service worker removal was completed? ', success);
+                });
               // Check we have a subscription to unsubscribe
               if (!pushSubscription) {
                 // No subscription object, so set the state
@@ -139,9 +145,6 @@ new window.Vue({
               // We have a subscription, so call unsubscribe on it
               pushSubscription.unsubscribe()
                 .then(function(successful) {
-                  // remove the user from Firebase
-                  window.firebase.database().ref('subscriptions/' + this.safeEmail).remove();
-
                   // turn everything back to the initial state
                   this.buttonDisable = false;
                   this.buttonDisableDisable = false;
@@ -175,7 +178,8 @@ new window.Vue({
         .ref('subscriptions/' + this.safeEmail)
         .set({
           endpoint: newSubscription.endpoint,
-          keys: newSubscription.keys
+          keys: newSubscription.keys,
+          created_at: Date.now()
         })
         .then(function() {
           console.log('Successfully saved into database.');
