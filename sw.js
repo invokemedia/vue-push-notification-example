@@ -1,6 +1,5 @@
-var BASE_URL = "https://vue-push-notification-example.dev";
-var NOTIFICATION_ENDPOINT = BASE_URL + "/example-fetch.json";
-var URL_TO_DEFAULT_ICON = BASE_URL + "/images/icon-192x192.png";
+var NOTIFICATION_ENDPOINT = "/example-fetch.json";
+var URL_TO_DEFAULT_ICON = "/images/icon-192x192.png";
 
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
