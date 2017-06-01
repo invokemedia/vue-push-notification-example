@@ -1,0 +1,13 @@
+{
+  "name": "polygon-notify",
+  "description": "Send notifications to all the users who subscribed to Polygon",
+  "scripts": {
+    "start": "NODE_ENV=local node index.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^4.2.1",
+    "firebase-functions": "^0.5.1",
+    "request": "^2.81.0",
+    "request-promise": "^2.0.0"
+  }
+}
