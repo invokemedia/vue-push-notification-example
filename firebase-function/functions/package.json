@@ -1,6 +1,6 @@
 {
-  "name": "polygon-notify",
-  "description": "Send notifications to all the users who subscribed to Polygon",
+  "name": "vue-push-notification-notify",
+  "description": "Send notifications to all the users who subscribed to the website",
   "scripts": {
     "start": "NODE_ENV=local node index.js"
   },
